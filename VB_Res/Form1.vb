@@ -12,7 +12,6 @@ Public Class Form1
         Panel1.Location = New System.Drawing.Point((Me.Width / 2) - (Panel1.Width / 2), (Me.Height / 2) - (Panel1.Height / 2))
     End Sub
 
-
     'Function Show Data in DataGridView
     Sub datagirdshow()
         Dim Conn As SqlConnection
@@ -203,17 +202,22 @@ Public Class Form1
 
     'Function Click Show Data in textBox
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
-        Dim cindex As Integer
-        cindex = DataGridView1.CurrentRow.Index
-        TextBox1.Text = DataGridView1.Item(0, cindex).Value
-        TextBox2.Text = DataGridView1.Item(1, cindex).Value
-        TextBox3.Text = DataGridView1.Item(2, cindex).Value
-        TextBox4.Text = DataGridView1.Item(3, cindex).Value
-        TextBox5.Text = DataGridView1.Item(4, cindex).Value
-        TextBox6.Text = DataGridView1.Item(5, cindex).Value
-        TextBox7.Text = DataGridView1.Item(6, cindex).Value
-        TextBox8.Text = DataGridView1.Item(7, cindex).Value
-        ComboBox1.Text = DataGridView1.Item(8, cindex).Value
+
+        Try
+            Dim cindex As Integer
+            cindex = DataGridView1.CurrentRow.Index
+            TextBox1.Text = DataGridView1.Item(0, cindex).Value
+            TextBox2.Text = DataGridView1.Item(1, cindex).Value
+            TextBox3.Text = DataGridView1.Item(2, cindex).Value
+            TextBox4.Text = DataGridView1.Item(3, cindex).Value
+            TextBox5.Text = DataGridView1.Item(4, cindex).Value
+            TextBox6.Text = DataGridView1.Item(5, cindex).Value
+            TextBox7.Text = DataGridView1.Item(6, cindex).Value
+            TextBox8.Text = DataGridView1.Item(7, cindex).Value
+            ComboBox1.Text = DataGridView1.Item(8, cindex).Value
+        Catch ex As Exception
+
+        End Try
 
     End Sub
 

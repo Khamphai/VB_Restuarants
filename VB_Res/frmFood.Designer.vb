@@ -58,9 +58,9 @@ Partial Class frmFood
         Me.Panel1.Controls.Add(Me.GroupBox2)
         Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.Font = New System.Drawing.Font("BoonBaan", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1041, 522)
+        Me.Panel1.Size = New System.Drawing.Size(983, 522)
         Me.Panel1.TabIndex = 1
         '
         'Label1
@@ -85,7 +85,7 @@ Partial Class frmFood
         Me.GroupBox3.ForeColor = System.Drawing.Color.White
         Me.GroupBox3.Location = New System.Drawing.Point(328, 426)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(702, 85)
+        Me.GroupBox3.Size = New System.Drawing.Size(645, 85)
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "ປຸ່ມຄວບຄຸມ"
@@ -93,7 +93,7 @@ Partial Class frmFood
         'Button5
         '
         Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button5.Location = New System.Drawing.Point(595, 32)
+        Me.Button5.Location = New System.Drawing.Point(534, 32)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(101, 34)
         Me.Button5.TabIndex = 4
@@ -103,7 +103,7 @@ Partial Class frmFood
         'Button4
         '
         Me.Button4.BackColor = System.Drawing.Color.Red
-        Me.Button4.Location = New System.Drawing.Point(412, 32)
+        Me.Button4.Location = New System.Drawing.Point(382, 32)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(101, 34)
         Me.Button4.TabIndex = 3
@@ -113,7 +113,7 @@ Partial Class frmFood
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.LawnGreen
-        Me.Button3.Location = New System.Drawing.Point(305, 32)
+        Me.Button3.Location = New System.Drawing.Point(275, 32)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(101, 34)
         Me.Button3.TabIndex = 2
@@ -147,7 +147,7 @@ Partial Class frmFood
         Me.GroupBox2.ForeColor = System.Drawing.Color.Black
         Me.GroupBox2.Location = New System.Drawing.Point(328, 88)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(702, 332)
+        Me.GroupBox2.Size = New System.Drawing.Size(645, 332)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "ສະແດງຂໍ້ມູນອາຫານ"
@@ -159,7 +159,7 @@ Partial Class frmFood
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(7, 26)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(687, 300)
+        Me.DataGridView1.Size = New System.Drawing.Size(627, 300)
         Me.DataGridView1.TabIndex = 0
         '
         'GroupBox1
@@ -278,8 +278,9 @@ Partial Class frmFood
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1041, 521)
+        Me.ClientSize = New System.Drawing.Size(1010, 548)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmFood"
         Me.Text = "frmFood"
         Me.Panel1.ResumeLayout(False)

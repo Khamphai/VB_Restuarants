@@ -23,6 +23,7 @@ Partial Class frmLogin
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -36,6 +37,7 @@ Partial Class frmLogin
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Teal
+        Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Button1)
@@ -49,6 +51,17 @@ Partial Class frmLogin
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(545, 312)
         Me.Panel1.TabIndex = 0
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("BoonBaan", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(208, 30)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(152, 43)
+        Me.Label3.TabIndex = 7
+        Me.Label3.Text = "ເຂົ້າສູ່ລະບົບ"
         '
         'Button3
         '
@@ -82,14 +95,16 @@ Partial Class frmLogin
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(238, 139)
+        Me.TextBox2.AcceptsReturn = True
+        Me.TextBox2.Location = New System.Drawing.Point(238, 166)
         Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox2.Size = New System.Drawing.Size(212, 33)
         Me.TextBox2.TabIndex = 3
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(238, 55)
+        Me.TextBox1.Location = New System.Drawing.Point(238, 105)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(212, 33)
         Me.TextBox1.TabIndex = 2
@@ -97,7 +112,7 @@ Partial Class frmLogin
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(86, 142)
+        Me.Label2.Location = New System.Drawing.Point(86, 169)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(95, 25)
         Me.Label2.TabIndex = 1
@@ -106,7 +121,7 @@ Partial Class frmLogin
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(86, 58)
+        Me.Label1.Location = New System.Drawing.Point(86, 108)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(135, 25)
         Me.Label1.TabIndex = 0
@@ -136,4 +151,5 @@ Partial Class frmLogin
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents Label3 As Label
 End Class

@@ -23,13 +23,15 @@ Partial Class frmReserve
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
@@ -50,6 +52,8 @@ Partial Class frmReserve
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -58,17 +62,13 @@ Partial Class frmReserve
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
-        Me.GroupBox5.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -82,29 +82,84 @@ Partial Class frmReserve
         Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.Font = New System.Drawing.Font("BoonBaan", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.ForeColor = System.Drawing.Color.White
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Location = New System.Drawing.Point(13, 14)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1041, 522)
         Me.Panel1.TabIndex = 4
         '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.TextBox7)
+        Me.GroupBox5.Controls.Add(Me.Label7)
+        Me.GroupBox5.Controls.Add(Me.Label17)
+        Me.GroupBox5.Controls.Add(Me.Label8)
+        Me.GroupBox5.Controls.Add(Me.Label16)
+        Me.GroupBox5.Controls.Add(Me.TextBox6)
+        Me.GroupBox5.Controls.Add(Me.Label15)
+        Me.GroupBox5.Controls.Add(Me.Label14)
+        Me.GroupBox5.Font = New System.Drawing.Font("BoonBaan", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox5.ForeColor = System.Drawing.Color.White
+        Me.GroupBox5.Location = New System.Drawing.Point(571, 88)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(459, 105)
+        Me.GroupBox5.TabIndex = 14
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "ອາຫານ ແລະ ເຄື່ອງດື່ມ"
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Enabled = False
+        Me.TextBox7.Location = New System.Drawing.Point(124, 61)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(109, 33)
+        Me.TextBox7.TabIndex = 19
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("BoonBaan", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(7, 29)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(101, 21)
+        Me.Label7.TabIndex = 6
+        Me.Label7.Text = "ລະຫັດການຈອງ:"
+        '
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(366, 65)
+        Me.Label17.Location = New System.Drawing.Point(348, 64)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(79, 25)
         Me.Label17.TabIndex = 18
         Me.Label17.Text = "Label17"
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("BoonBaan", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(7, 65)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(119, 21)
+        Me.Label8.TabIndex = 7
+        Me.Label8.Text = "ລະຫັດລາຍລະອຽດ:"
+        '
         'Label16
         '
         Me.Label16.AutoSize = True
         Me.Label16.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Label16.Location = New System.Drawing.Point(365, 30)
+        Me.Label16.Location = New System.Drawing.Point(347, 29)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(79, 25)
         Me.Label16.TabIndex = 17
         Me.Label16.Text = "Label16"
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Enabled = False
+        Me.TextBox6.Location = New System.Drawing.Point(124, 25)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(109, 33)
+        Me.TextBox6.TabIndex = 14
         '
         'Label15
         '
@@ -125,34 +180,6 @@ Partial Class frmReserve
         Me.Label14.Size = New System.Drawing.Size(110, 21)
         Me.Label14.TabIndex = 14
         Me.Label14.Text = "ລະຫັດພະນັກງານ:"
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Enabled = False
-        Me.TextBox6.Location = New System.Drawing.Point(124, 25)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(109, 33)
-        Me.TextBox6.TabIndex = 14
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("BoonBaan", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(7, 65)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(119, 21)
-        Me.Label8.TabIndex = 7
-        Me.Label8.Text = "ລະຫັດລາຍລະອຽດ:"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("BoonBaan", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(7, 29)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(101, 21)
-        Me.Label7.TabIndex = 6
-        Me.Label7.Text = "ລະຫັດການຈອງ:"
         '
         'GroupBox4
         '
@@ -219,7 +246,7 @@ Partial Class frmReserve
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(125, 54)
         Me.Button3.TabIndex = 6
-        Me.Button3.Text = "Add"
+        Me.Button3.Text = "ເພີ່ມ"
         Me.Button3.UseVisualStyleBackColor = False
         '
         'ComboBox3
@@ -308,7 +335,7 @@ Partial Class frmReserve
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(125, 54)
         Me.Button2.TabIndex = 5
-        Me.Button2.Text = "Back"
+        Me.Button2.Text = "ກັບໄປເມນູ"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button1
@@ -318,7 +345,7 @@ Partial Class frmReserve
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(125, 54)
         Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Save"
+        Me.Button1.Text = "ບັນທຶກ"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Button4
@@ -328,7 +355,7 @@ Partial Class frmReserve
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(125, 54)
         Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Delete"
+        Me.Button4.Text = "ລົບ"
         Me.Button4.UseVisualStyleBackColor = False
         '
         'GroupBox2
@@ -336,7 +363,7 @@ Partial Class frmReserve
         Me.GroupBox2.Controls.Add(Me.DataGridView1)
         Me.GroupBox2.Font = New System.Drawing.Font("BoonBaan", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox2.Location = New System.Drawing.Point(571, 188)
+        Me.GroupBox2.Location = New System.Drawing.Point(571, 194)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(459, 232)
         Me.GroupBox2.TabIndex = 1
@@ -373,6 +400,22 @@ Partial Class frmReserve
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "ຂໍ້ມູນການຈອງ"
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Enabled = False
+        Me.TextBox9.Location = New System.Drawing.Point(39, 373)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(184, 33)
+        Me.TextBox9.TabIndex = 13
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Enabled = False
+        Me.TextBox8.Location = New System.Drawing.Point(39, 299)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(184, 33)
+        Me.TextBox8.TabIndex = 12
         '
         'TextBox3
         '
@@ -448,59 +491,19 @@ Partial Class frmReserve
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "ຊື້ລູກຄ້າ:"
         '
-        'TextBox8
-        '
-        Me.TextBox8.Enabled = False
-        Me.TextBox8.Location = New System.Drawing.Point(39, 299)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(184, 33)
-        Me.TextBox8.TabIndex = 12
-        '
-        'TextBox9
-        '
-        Me.TextBox9.Enabled = False
-        Me.TextBox9.Location = New System.Drawing.Point(39, 373)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(184, 33)
-        Me.TextBox9.TabIndex = 13
-        '
-        'GroupBox5
-        '
-        Me.GroupBox5.Controls.Add(Me.TextBox7)
-        Me.GroupBox5.Controls.Add(Me.Label7)
-        Me.GroupBox5.Controls.Add(Me.Label17)
-        Me.GroupBox5.Controls.Add(Me.Label8)
-        Me.GroupBox5.Controls.Add(Me.Label16)
-        Me.GroupBox5.Controls.Add(Me.TextBox6)
-        Me.GroupBox5.Controls.Add(Me.Label15)
-        Me.GroupBox5.Controls.Add(Me.Label14)
-        Me.GroupBox5.Font = New System.Drawing.Font("BoonBaan", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox5.ForeColor = System.Drawing.Color.White
-        Me.GroupBox5.Location = New System.Drawing.Point(571, 88)
-        Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(459, 105)
-        Me.GroupBox5.TabIndex = 14
-        Me.GroupBox5.TabStop = False
-        Me.GroupBox5.Text = "ອາຫານ ແລະ ເຄື່ອງດື່ມ"
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Enabled = False
-        Me.TextBox7.Location = New System.Drawing.Point(124, 61)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(109, 33)
-        Me.TextBox7.TabIndex = 19
-        '
         'frmReserve
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1041, 523)
+        Me.ClientSize = New System.Drawing.Size(1067, 548)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmReserve"
         Me.Text = "frmReserve"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
@@ -508,8 +511,6 @@ Partial Class frmReserve
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.GroupBox5.ResumeLayout(False)
-        Me.GroupBox5.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub

@@ -6,9 +6,28 @@ Public Class frmDrink
 
     Private Sub frmDrink_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call datagirdshow()
-        Me.WindowState = FormWindowState.Maximized
+        Me.CenterToScreen()
         Panel1.Location = New System.Drawing.Point((Me.Width / 2) - (Panel1.Width / 2), (Me.Height / 2) - (Panel1.Height / 2))
 
+        Dim Conn As SqlConnection
+        Dim Cmd As New SqlCommand
+        Try
+            Conn = getConnect()
+            Conn.Open()
+            Cmd = Conn.CreateCommand
+            Cmd.CommandText = "select * from drinktype"
+            Dim da As New SqlDataAdapter(Cmd.CommandText, Conn)
+            Dim dt As New DataTable("restuarant")
+            da.Fill(dt)
+            Conn.Close()
+            ComboBox1.Items.Clear()
+            For i = 0 To dt.Rows.Count - 1 Step 1
+                ComboBox1.Items.Add(dt.Rows(i)(1))
+            Next
+
+        Catch ex As Exception
+            MsgBox("Error: " & ex.Source & ": " & ex.Message, MsgBoxStyle.OkOnly, "Connection Error !!")
+        End Try
 
     End Sub
 
@@ -107,7 +126,7 @@ Public Class frmDrink
             TextBox2.Enabled = True
             TextBox3.Enabled = True
             TextBox4.Enabled = True
-            ComboBox1.Enabled = True
+            ComboBox1.Enabled = False
         Else
             Button2.Text = "Update"
             TextBox2.Enabled = False
@@ -216,7 +235,7 @@ Public Class frmDrink
         Close()
     End Sub
 
-    Private Sub DataGridView1_CellContentClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub DataGridView1_CellContentClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
 
         Try
             Dim cindex As Integer
@@ -225,22 +244,23 @@ Public Class frmDrink
             TextBox2.Text = DataGridView1.Item(1, cindex).Value.ToString()
             TextBox3.Text = DataGridView1.Item(2, cindex).Value.ToString()
             TextBox4.Text = DataGridView1.Item(3, cindex).Value.ToString()
-            'ComboBox1.Text = DataGridView1.Item(4, cindex).Value.ToString()
+            ComboBox1.Text = DataGridView1.Item(4, cindex).Value.ToString()
 
 
-            Dim Conn As SqlConnection
-            Dim Cmd As New SqlCommand
-            Conn = getConnect()
-            Conn.Open()
-            Cmd = Conn.CreateCommand
-            Cmd.CommandText = "Select drinktype_name from drinktype where drinktype_id = '" & DataGridView1.Item(4, cindex).Value & "'"
-            Dim da As New SqlDataAdapter(Cmd.CommandText, Conn)
-            Dim dt As New DataTable("Restuarant")
-            da.Fill(dt)
-            ComboBox1.Text = dt.Rows(0)(0)
+            'Dim Conn As SqlConnection
+            'Dim Cmd As New SqlCommand
+            'Conn = getConnect()
+            'Conn.Open()
+            'Cmd = Conn.CreateCommand
+            'Cmd.CommandText = "Select drinktype_name from drinktype where drinktype_id = '" & DataGridView1.Item(4, cindex).Value & "'"
+            'Dim da As New SqlDataAdapter(Cmd.CommandText, Conn)
+            'Dim dt As New DataTable("Restuarant")
+            'da.Fill(dt)
+            'ComboBox1.Text = dt.Rows(0)(0)
 
         Catch ex As Exception
             MsgBox("Error: " & ex.Source & ": " & ex.Message, MsgBoxStyle.OkOnly, "Connection Error !!")
         End Try
     End Sub
+
 End Class

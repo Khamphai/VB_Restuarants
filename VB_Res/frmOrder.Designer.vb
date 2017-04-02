@@ -22,9 +22,10 @@ Partial Class frmOrder
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
@@ -40,7 +41,12 @@ Partial Class frmOrder
         Me.Button4 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -49,8 +55,7 @@ Partial Class frmOrder
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -68,7 +73,7 @@ Partial Class frmOrder
         Me.Panel1.Controls.Add(Me.GroupBox2)
         Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.Font = New System.Drawing.Font("BoonBaan", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel1.Location = New System.Drawing.Point(0, -1)
+        Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1041, 522)
         Me.Panel1.TabIndex = 3
@@ -93,13 +98,12 @@ Partial Class frmOrder
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "ວັດຖຸດິບ, ເຄື່ອງປຸງ ແລະ ເຄື່ອງດື່ມ"
         '
-        'TextBox2
+        'TextBox4
         '
-        Me.TextBox2.Enabled = False
-        Me.TextBox2.Location = New System.Drawing.Point(40, 296)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(183, 33)
-        Me.TextBox2.TabIndex = 10
+        Me.TextBox4.Location = New System.Drawing.Point(44, 227)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(199, 33)
+        Me.TextBox4.TabIndex = 9
         '
         'Label12
         '
@@ -118,12 +122,13 @@ Partial Class frmOrder
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(125, 54)
         Me.Button3.TabIndex = 6
-        Me.Button3.Text = "Add"
+        Me.Button3.Text = "ເພີ່ມ"
         Me.Button3.UseVisualStyleBackColor = False
         '
         'ComboBox3
         '
         Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Items.AddRange(New Object() {"ກິໂລ", "ແກ້ວ", "ລັງ", "ອັນ", "ຖົງ", "ກັບ", "ແກັດ", "ກ່ອງ", "ລິດ", "ປິດ", "ແພັກ"})
         Me.ComboBox3.Location = New System.Drawing.Point(44, 295)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(199, 33)
@@ -160,6 +165,7 @@ Partial Class frmOrder
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"ເຄື່ອງດື່ມ", "ເຄື່ອງປຸງ", "ວັດຖຸດິບ"})
         Me.ComboBox1.Location = New System.Drawing.Point(44, 74)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(199, 33)
@@ -207,7 +213,7 @@ Partial Class frmOrder
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(125, 54)
         Me.Button2.TabIndex = 5
-        Me.Button2.Text = "Back"
+        Me.Button2.Text = "ກັບໄປເມນູ"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button1
@@ -217,7 +223,7 @@ Partial Class frmOrder
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(125, 54)
         Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Save"
+        Me.Button1.Text = "ບັນທຶກ"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Button4
@@ -227,7 +233,7 @@ Partial Class frmOrder
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(125, 54)
         Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Delete"
+        Me.Button4.Text = "ລົບ"
         Me.Button4.UseVisualStyleBackColor = False
         '
         'GroupBox2
@@ -247,10 +253,29 @@ Partial Class frmOrder
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3})
         Me.DataGridView1.Location = New System.Drawing.Point(7, 26)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(446, 300)
         Me.DataGridView1.TabIndex = 0
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "ລາຍການ"
+        Me.Column1.Name = "Column1"
+        Me.Column1.Width = 99
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "ຈຳນວນ"
+        Me.Column2.Name = "Column2"
+        Me.Column2.Width = 88
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "ຫົວໜ່ວຍ"
+        Me.Column3.Name = "Column3"
+        Me.Column3.Width = 99
         '
         'GroupBox1
         '
@@ -272,6 +297,22 @@ Partial Class frmOrder
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "ຂໍ້ມູນການສັ່ງຊື້"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Enabled = False
+        Me.TextBox2.Location = New System.Drawing.Point(40, 296)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(183, 33)
+        Me.TextBox2.TabIndex = 10
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Enabled = False
+        Me.TextBox3.Location = New System.Drawing.Point(40, 371)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(183, 33)
+        Me.TextBox3.TabIndex = 8
         '
         'Label8
         '
@@ -295,19 +336,20 @@ Partial Class frmOrder
         '
         'Label6
         '
-        Me.Label6.AutoSize = True
+        Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label6.Font = New System.Drawing.Font("BoonBaan", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(40, 223)
+        Me.Label6.Location = New System.Drawing.Point(40, 224)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(60, 21)
+        Me.Label6.Size = New System.Drawing.Size(183, 37)
         Me.Label6.TabIndex = 5
         Me.Label6.Text = "Label6"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("BoonBaan", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(40, 186)
+        Me.Label5.Location = New System.Drawing.Point(40, 192)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(82, 21)
         Me.Label5.TabIndex = 4
@@ -315,13 +357,14 @@ Partial Class frmOrder
         '
         'Label4
         '
-        Me.Label4.AutoSize = True
+        Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label4.Font = New System.Drawing.Font("BoonBaan", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(40, 149)
+        Me.Label4.Location = New System.Drawing.Point(40, 145)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(60, 21)
+        Me.Label4.Size = New System.Drawing.Size(183, 37)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Label4"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label3
         '
@@ -351,28 +394,18 @@ Partial Class frmOrder
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "ລະຫັດສັ່ງຊື້:"
         '
-        'TextBox3
+        'Timer1
         '
-        Me.TextBox3.Enabled = False
-        Me.TextBox3.Location = New System.Drawing.Point(40, 371)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(183, 33)
-        Me.TextBox3.TabIndex = 8
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Enabled = False
-        Me.TextBox4.Location = New System.Drawing.Point(44, 227)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(199, 33)
-        Me.TextBox4.TabIndex = 9
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 1000
         '
         'frmOrder
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1041, 519)
+        Me.ClientSize = New System.Drawing.Size(1066, 546)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmOrder"
         Me.Text = "frmOrder"
         Me.Panel1.ResumeLayout(False)
@@ -417,4 +450,8 @@ Partial Class frmOrder
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
 End Class

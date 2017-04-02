@@ -6,7 +6,7 @@ Public Class frmFood
 
     Private Sub frmFood_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call datagirdshow()
-        Me.WindowState = FormWindowState.Maximized
+        Me.CenterToScreen()
         Panel1.Location = New System.Drawing.Point((Me.Width / 2) - (Panel1.Width / 2), (Me.Height / 2) - (Panel1.Height / 2))
 
         Dim Conn As SqlConnection
@@ -86,6 +86,7 @@ Public Class frmFood
             TextBox2.Clear()
             TextBox3.Clear()
             TextBox4.Clear()
+            ComboBox1.Text = "------"
 
         Else
             Button1.Text = "New"
@@ -97,6 +98,7 @@ Public Class frmFood
             TextBox2.Clear()
             TextBox3.Clear()
             TextBox4.Clear()
+            ComboBox1.Text = "------"
 
         End If
     End Sub
@@ -108,7 +110,7 @@ Public Class frmFood
             TextBox2.Enabled = True
             TextBox3.Enabled = True
             TextBox4.Enabled = True
-            ComboBox1.Enabled = True
+            ComboBox1.Enabled = False
         Else
             Button2.Text = "Update"
             TextBox2.Enabled = False
@@ -124,11 +126,9 @@ Public Class frmFood
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         Try
-            If Button1.Text = "Cancel" Then
 
-            Else
 
-                Dim cindex As Integer
+            Dim cindex As Integer
                 cindex = DataGridView1.CurrentRow.Index
                 TextBox1.Text = DataGridView1.Item(0, cindex).Value.ToString()
                 TextBox2.Text = DataGridView1.Item(1, cindex).Value.ToString()
@@ -136,7 +136,7 @@ Public Class frmFood
                 TextBox4.Text = DataGridView1.Item(3, cindex).Value.ToString()
                 ComboBox1.Text = DataGridView1.Item(4, cindex).Value.ToString()
 
-            End If
+
 
             'Dim Conn As SqlConnection
             'Dim Cmd As New SqlCommand
@@ -200,8 +200,7 @@ Public Class frmFood
                 cmd.CommandText = "UPDATE foods SET 
                                     food_name = N'" & TextBox2.Text & "',
                                     food_qtt = N'" & TextBox3.Text & "',
-                                    food_price = N'" & TextBox4.Text & "',
-                                    
+                                    food_price = N'" & TextBox4.Text & "'                                   
                                     where food_ID= N'" & TextBox1.Text & "'"
                 Dim da As New SqlDataAdapter(cmd.CommandText, conn)
                 Dim dt As New DataTable("restuarant")
@@ -242,4 +241,6 @@ Public Class frmFood
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Close()
     End Sub
+
+
 End Class

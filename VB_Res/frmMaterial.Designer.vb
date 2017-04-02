@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmDrink
+Partial Class frmMaterial
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -33,8 +33,6 @@ Partial Class frmDrink
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
@@ -60,19 +58,19 @@ Partial Class frmDrink
         Me.Panel1.Font = New System.Drawing.Font("BoonBaan", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(957, 522)
-        Me.Panel1.TabIndex = 2
+        Me.Panel1.Size = New System.Drawing.Size(935, 434)
+        Me.Panel1.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("BoonBaan", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(435, 24)
+        Me.Label1.Location = New System.Drawing.Point(367, 24)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(173, 43)
+        Me.Label1.Size = New System.Drawing.Size(225, 43)
         Me.Label1.TabIndex = 3
-        Me.Label1.Text = "ຂໍ້ມູນເຄື່ອງດື່ມ"
+        Me.Label1.Text = "ຊື້ວັດຖຸດິບເຂົ້າຮ້ານ"
         '
         'GroupBox3
         '
@@ -83,9 +81,9 @@ Partial Class frmDrink
         Me.GroupBox3.Controls.Add(Me.Button1)
         Me.GroupBox3.Font = New System.Drawing.Font("BoonBaan", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.ForeColor = System.Drawing.Color.White
-        Me.GroupBox3.Location = New System.Drawing.Point(328, 426)
+        Me.GroupBox3.Location = New System.Drawing.Point(791, 88)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(619, 85)
+        Me.GroupBox3.Size = New System.Drawing.Size(131, 332)
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "ປຸ່ມຄວບຄຸມ"
@@ -93,37 +91,37 @@ Partial Class frmDrink
         'Button5
         '
         Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button5.Location = New System.Drawing.Point(507, 32)
+        Me.Button5.Location = New System.Drawing.Point(14, 289)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(101, 34)
         Me.Button5.TabIndex = 4
-        Me.Button5.Text = "ອອກ"
+        Me.Button5.Text = "Exit"
         Me.Button5.UseVisualStyleBackColor = False
         '
         'Button4
         '
         Me.Button4.BackColor = System.Drawing.Color.Red
-        Me.Button4.Location = New System.Drawing.Point(368, 32)
+        Me.Button4.Location = New System.Drawing.Point(14, 209)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(101, 34)
         Me.Button4.TabIndex = 3
-        Me.Button4.Text = "ລົບ"
+        Me.Button4.Text = "Delete"
         Me.Button4.UseVisualStyleBackColor = False
         '
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.LawnGreen
-        Me.Button3.Location = New System.Drawing.Point(261, 32)
+        Me.Button3.Location = New System.Drawing.Point(14, 169)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(101, 34)
         Me.Button3.TabIndex = 2
-        Me.Button3.Text = "ບັນທຶກ"
+        Me.Button3.Text = "Save"
         Me.Button3.UseVisualStyleBackColor = False
         '
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Button2.Location = New System.Drawing.Point(113, 32)
+        Me.Button2.Location = New System.Drawing.Point(14, 72)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(101, 34)
         Me.Button2.TabIndex = 1
@@ -133,7 +131,7 @@ Partial Class frmDrink
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Button1.Location = New System.Drawing.Point(6, 32)
+        Me.Button1.Location = New System.Drawing.Point(14, 32)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(101, 34)
         Me.Button1.TabIndex = 0
@@ -147,25 +145,22 @@ Partial Class frmDrink
         Me.GroupBox2.ForeColor = System.Drawing.Color.Black
         Me.GroupBox2.Location = New System.Drawing.Point(328, 88)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(619, 332)
+        Me.GroupBox2.Size = New System.Drawing.Size(457, 332)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "ສະແດງຂໍ້ມູນເຄື່ອງດື່ມ"
+        Me.GroupBox2.Text = "ສະແດງຂໍ້ມູນຊື້ວັດຖຸດິບເຂົ້າຮ້ານ"
         '
         'DataGridView1
         '
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(7, 26)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(604, 300)
+        Me.DataGridView1.Size = New System.Drawing.Size(434, 300)
         Me.DataGridView1.TabIndex = 0
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
-        Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.TextBox4)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.TextBox3)
@@ -178,43 +173,24 @@ Partial Class frmDrink
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(9, 88)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(313, 423)
+        Me.GroupBox1.Size = New System.Drawing.Size(313, 332)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "ຂໍ້ມູນປະເພດ"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.Enabled = False
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(93, 338)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(214, 33)
-        Me.ComboBox1.TabIndex = 18
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("BoonBaan", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(7, 344)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(52, 21)
-        Me.Label6.TabIndex = 8
-        Me.Label6.Text = "ປະເພດ"
+        Me.GroupBox1.Text = "ຂໍ້ມູນຊື້ວັດຖຸດິບເຂົ້າຮ້ານ"
         '
         'TextBox4
         '
         Me.TextBox4.Enabled = False
-        Me.TextBox4.Location = New System.Drawing.Point(93, 265)
+        Me.TextBox4.Location = New System.Drawing.Point(108, 278)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(214, 33)
+        Me.TextBox4.Size = New System.Drawing.Size(199, 33)
         Me.TextBox4.TabIndex = 7
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("BoonBaan", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(6, 271)
+        Me.Label5.Location = New System.Drawing.Point(6, 281)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(42, 21)
         Me.Label5.TabIndex = 6
@@ -223,16 +199,16 @@ Partial Class frmDrink
         'TextBox3
         '
         Me.TextBox3.Enabled = False
-        Me.TextBox3.Location = New System.Drawing.Point(93, 195)
+        Me.TextBox3.Location = New System.Drawing.Point(108, 200)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(214, 33)
+        Me.TextBox3.Size = New System.Drawing.Size(199, 33)
         Me.TextBox3.TabIndex = 5
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("BoonBaan", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(6, 201)
+        Me.Label4.Location = New System.Drawing.Point(6, 203)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(53, 21)
         Me.Label4.TabIndex = 4
@@ -241,48 +217,47 @@ Partial Class frmDrink
         'TextBox2
         '
         Me.TextBox2.Enabled = False
-        Me.TextBox2.Location = New System.Drawing.Point(93, 127)
+        Me.TextBox2.Location = New System.Drawing.Point(108, 119)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(214, 33)
+        Me.TextBox2.Size = New System.Drawing.Size(199, 33)
         Me.TextBox2.TabIndex = 3
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("BoonBaan", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(6, 133)
+        Me.Label3.Location = New System.Drawing.Point(6, 122)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(67, 21)
+        Me.Label3.Size = New System.Drawing.Size(64, 21)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "ຊື່ເຄື່ອງດື່ມ"
+        Me.Label3.Text = "ຊື່ວັດຖຸດິບ"
         '
         'TextBox1
         '
         Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(93, 60)
+        Me.TextBox1.Location = New System.Drawing.Point(108, 37)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(214, 33)
+        Me.TextBox1.Size = New System.Drawing.Size(199, 33)
         Me.TextBox1.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("BoonBaan", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(3, 66)
+        Me.Label2.Location = New System.Drawing.Point(6, 40)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(47, 21)
+        Me.Label2.Size = New System.Drawing.Size(92, 21)
         Me.Label2.TabIndex = 0
-        Me.Label2.Text = "ລະຫັດ"
+        Me.Label2.Text = "ລະຫັດວັດຖຸດິບ"
         '
-        'frmDrink
+        'frmMaterial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(982, 547)
+        Me.ClientSize = New System.Drawing.Size(961, 458)
         Me.Controls.Add(Me.Panel1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "frmDrink"
-        Me.Text = "frmDrink"
+        Me.Name = "frmMaterial"
+        Me.Text = "frmMaterial"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
@@ -305,8 +280,6 @@ Partial Class frmDrink
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Label6 As Label
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents TextBox3 As TextBox
